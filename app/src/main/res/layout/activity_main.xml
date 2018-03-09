@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addItem"
+        android:text="添加"/>
+
+    <!--android:columnCount="4" 列数
+    android:animateLayoutChanges="true" 开启动画
+    -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:columnCount="4"></GridLayout>
+
+    <com.eren.gridlayoutdemo.view.DragGridLayout
+        android:id="@+id/dragGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.eren.gridlayoutdemo.view.DragGridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="点击选择频道"/>
+
+    <com.eren.gridlayoutdemo.view.DragGridLayout
+        android:id="@+id/dragGridLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.eren.gridlayoutdemo.view.DragGridLayout>
+</LinearLayout>
